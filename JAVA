@@ -1,0 +1,26 @@
+let draggedItem = null;
+
+document.querySelectorAll(".drag").forEach(item => {
+  item.addEventListener("dragstart", () => {
+    draggedItem = item;
+  });
+});
+
+document.querySelectorAll(".drop").forEach(box => {
+  box.addEventListener("dragover", e => {
+    e.preventDefault();
+  });
+
+  box.addEventListener("drop", () => {
+    if (draggedItem.id === box.dataset.answer) {
+      box.textContent = draggedItem.textContent + " ✔";
+      box.style.background = "#55efc4";
+      draggedItem.style.display = "none";
+      document.getElementById("dragResult").textContent =
+        "Great job! Correct match 🎉";
+    } else {
+      document.getElementById("dragResult").textContent =
+        "Try again ❌";
+    }
+  });
+});

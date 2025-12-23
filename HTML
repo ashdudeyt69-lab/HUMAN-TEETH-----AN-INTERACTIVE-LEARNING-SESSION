@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Human Teeth – Interactive Learning</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>🦷 Human Teeth – Interactive Learning</h1>
+  <p>Learn • Drag • Explore</p>
+</header>
+
+<section class="info">
+  <h2>Types of Human Teeth</h2>
+
+  <div class="teeth-container">
+    <div class="tooth">Incisors<br><span>Cutting</span></div>
+    <div class="tooth">Canines<br><span>Tearing</span></div>
+    <div class="tooth">Premolars<br><span>Crushing</span></div>
+    <div class="tooth">Molars<br><span>Grinding</span></div>
+  </div>
+</section>
+
+<section class="info">
+  <h2>Diagram: Structure of a Tooth</h2>
+
+  <div class="diagram">
+    <div class="enamel">Enamel</div>
+    <div class="dentin">Dentin</div>
+    <div class="pulp">Pulp</div>
+  </div>
+
+  <p class="diagram-note">
+    Outer → Inner layers of a tooth
+  </p>
+</section>
+
+<section class="info decay">
+  <h2>Tooth Decay & Cavities</h2>
+  <p>
+    Bacteria + sugar = acid → damages enamel → cavities
+  </p>
+</section>
+
+<section class="drag-section">
+  <h2>🎯 Drag & Drop Activity</h2>
+  <p>Drag the tooth type to its correct function</p>
+
+  <div class="drag-container">
+    <div class="draggables">
+      <div class="drag" draggable="true" id="incisors">Incisors</div>
+      <div class="drag" draggable="true" id="canines">Canines</div>
+      <div class="drag" draggable="true" id="molars">Molars</div>
+    </div>
+
+    <div class="drops">
+      <div class="drop" data-answer="incisors">Cutting</div>
+      <div class="drop" data-answer="canines">Tearing</div>
+      <div class="drop" data-answer="molars">Grinding</div>
+    </div>
+  </div>
+
+  <p id="dragResult"></p>
+</section>
+
+<footer>
+  <p>Brush twice daily 🪥 | Healthy Teeth = Healthy Life 😁</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

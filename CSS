@@ -1,0 +1,115 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f0f8ff;
+  text-align: center;
+}
+
+header {
+  background: #0984e3;
+  color: white;
+  padding: 20px;
+}
+
+.info, .drag-section {
+  background: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  animation: fadeIn 1.5s;
+}
+
+.teeth-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.tooth {
+  width: 140px;
+  padding: 15px;
+  background: #dfe6e9;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.tooth:hover {
+  transform: scale(1.1);
+}
+
+.diagram {
+  width: 200px;
+  margin: auto;
+  border: 2px solid #555;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.enamel {
+  background: #fdcb6e;
+  padding: 15px;
+}
+
+.dentin {
+  background: #ffeaa7;
+  padding: 15px;
+}
+
+.pulp {
+  background: #ff7675;
+  padding: 15px;
+  color: white;
+}
+
+.diagram-note {
+  font-size: 14px;
+  color: #555;
+}
+
+.decay {
+  background: #ffeaa7;
+}
+
+.drag-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.drag {
+  background: #74b9ff;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  cursor: grab;
+  border-radius: 8px;
+}
+
+.drop {
+  width: 150px;
+  height: 50px;
+  border: 2px dashed #333;
+  margin: 10px;
+  line-height: 50px;
+  border-radius: 8px;
+}
+
+footer {
+  background: #0984e3;
+  color: white;
+  padding: 10px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
